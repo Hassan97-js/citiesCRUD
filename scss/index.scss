@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+
+@import "./var";
+@import "./btns";
+
+* {
+  box-sizing: border-box;
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+body {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 20px;
+  min-height: 100vh;
+  background: $bg;
+}
+
+main.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+header {
+  text-align: center;
+}
+
+div.citiesWrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-gap: 20px;
+}
+
+h2.cityName,
+p.cityPopulation,
+div.cityID {
+  margin: 1rem auto;
+  align-self: center;
+}
+
+h2.cityName {
+  border-bottom: 4px dotted $dark-yellow;
+  font-weight: bold;
+}
+
+span.cityNameSpan {
+  font-weight: 400;
+}
+
+p.cityPopulation {
+  justify-self: flex-start;
+  border-bottom: 4px dotted $dark-green;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+span.cityPopulationSpan {
+  font-weight: 400;
+}
+
+div.cityID {
+  justify-self: flex-start;
+  font-size: 1.3rem;
+  border-bottom: 4px dotted $dark-red;
+  font-weight: bold;
+}
+
+span.cityIdSpan {
+  font-weight: 400;
+}
